@@ -1,0 +1,24 @@
+<table class="min-w-full border border-slate-200 rounded-lg overflow-hidden">
+  <thead class="bg-slate-100 text-slate-700 text-sm">
+    <tr>
+      <th class="text-left p-3">Student</th>
+      <th class="text-left p-3">Matric No.</th>
+      <th class="text-left p-3">Course</th>
+      <th class="text-left p-3">Status</th>
+      <th class="text-left p-3">Priority</th>
+      <th class="text-right p-3">Fee Total</th>
+      <th class="text-right p-3">Fee Paid</th>
+      <th class="text-right p-3">Outstanding</th>
+      <th class="text-center p-3">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="divide-y divide-slate-100 text-sm">
+    {% for job in jobs %}
+      {% include "partials/row.html" %}
+    {% else %}
+    <tr>
+      <td colspan="9" class="p-4 text-center text-slate-500">No jobs yet. Add one above.</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
